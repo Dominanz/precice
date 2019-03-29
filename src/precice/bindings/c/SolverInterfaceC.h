@@ -143,10 +143,10 @@ void precicec_setMeshTriangleWithEdges (
  * @param[in] values Values of the data to be written.
  */
 void precicec_writeBlockVectorData (
-  int     dataID,
-  int     size,
-  int*    valueIndices,
-  double* values );
+  int           dataID,
+  int           size,
+  int*          valueIndices,
+  const double* values );
 
 /**
  * @brief Writes vectorial foating point data to the coupling mesh.
@@ -164,10 +164,10 @@ void precicec_writeVectorData (
  * @brief See precice::SolverInterface::writeBlockScalarData().
  */
 void precicec_writeBlockScalarData (
-  int     dataID,
-  int     size,
-  int*    valueIndices,
-  double* values );
+  int           dataID,
+  int           size,
+  int*          valueIndices,
+  const double* values );
 
 /**
  * @brief Writes scalar floating point data to the coupling mesh.
@@ -177,9 +177,9 @@ void precicec_writeBlockScalarData (
  * @param[in] dataValue Scalar data value to be written.
  */
 void precicec_writeScalarData (
-  int    dataID,
-  int    valueIndex,
-  double dataValue );
+  int           dataID,
+  int           valueIndex,
+  const double& dataValue );
 
 /**
  * @brief Reads vector data values given as block.

@@ -199,10 +199,10 @@ void precicec_setMeshTriangleWithEdges
 
 void precicec_writeBlockVectorData
 (
-  int     dataID,
-  int     size,
-  int*    valueIndices,
-  double* values )
+  int           dataID,
+  int           size,
+  int*          valueIndices,
+  const double* values )
 {
   assertion(impl != nullptr);
   impl->writeBlockVectorData(dataID, size, valueIndices, values);
@@ -220,10 +220,10 @@ void precicec_writeVectorData
 
 void precicec_writeBlockScalarData
 (
-  int     dataID,
-  int     size,
-  int*    valueIndices,
-  double* values )
+  int           dataID,
+  int           size,
+  int*          valueIndices,
+  const double* values )
 {
   assertion(impl != nullptr);
   impl->writeBlockScalarData(dataID, size, valueIndices, values);
@@ -231,9 +231,9 @@ void precicec_writeBlockScalarData
 
 void precicec_writeScalarData
 (
-  int    dataID,
-  int    valueIndex,
-  double dataValue )
+  int           dataID,
+  int           valueIndex,
+  const double& dataValue )
 {
   assertion ( impl != nullptr );
   impl->writeScalarData ( dataID, valueIndex, dataValue );
