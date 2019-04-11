@@ -666,10 +666,10 @@ int SolverInterfaceImpl:: setMeshVertex
 
 void SolverInterfaceImpl:: setMeshVertices
 (
-  int     meshID,
-  int     size,
-  double* positions,
-  int*    ids )
+  int           meshID,
+  int           size,
+  const double* positions,
+  int*          ids )
 {
   TRACE(meshID, size);
   if (_clientMode){
@@ -693,10 +693,10 @@ void SolverInterfaceImpl:: setMeshVertices
 
 void SolverInterfaceImpl:: getMeshVertices
 (
-  int     meshID,
-  size_t  size,
-  int*    ids,
-  double* positions )
+  int        meshID,
+  size_t     size,
+  const int* ids,
+  double*    positions )
 {
   TRACE(meshID, size);
   if (_clientMode){
@@ -720,10 +720,10 @@ void SolverInterfaceImpl:: getMeshVertices
 }
 
 void SolverInterfaceImpl:: getMeshVertexIDsFromPositions (
-  int     meshID,
-  size_t  size,
-  double* positions,
-  int*    ids )
+  int           meshID,
+  size_t        size,
+  const double* positions,
+  int*          ids )
 {
   TRACE(meshID, size);
   if (_clientMode){
@@ -1146,7 +1146,7 @@ void SolverInterfaceImpl:: writeBlockVectorData
 (
   int           fromDataID,
   int           size,
-  int*          valueIndices,
+  const int*    valueIndices,
   const double* values )
 {
   TRACE(fromDataID, size);
@@ -1213,7 +1213,7 @@ void SolverInterfaceImpl:: writeBlockScalarData
 (
   int           fromDataID,
   int           size,
-  int*          valueIndices,
+  const int*    valueIndices,
   const double* values )
 {
   TRACE(fromDataID, size);
@@ -1266,10 +1266,10 @@ void SolverInterfaceImpl:: writeScalarData
 
 void SolverInterfaceImpl:: readBlockVectorData
 (
-  int     toDataID,
-  int     size,
-  int*    valueIndices,
-  double* values )
+  int        toDataID,
+  int        size,
+  const int* valueIndices,
+  double*    values )
 {
   TRACE(toDataID, size);
   if (size == 0)
@@ -1333,10 +1333,10 @@ void SolverInterfaceImpl:: readVectorData
 
 void SolverInterfaceImpl:: readBlockScalarData
 (
-  int     toDataID,
-  int     size,
-  int*    valueIndices,
-  double* values )
+  int        toDataID,
+  int        size,
+  const int* valueIndices,
+  double*    values )
 {
   TRACE(toDataID, size);
   if (size == 0)
